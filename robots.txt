@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap:https://oviweyo.github.io/WEDE5020POE-ST10441339/
