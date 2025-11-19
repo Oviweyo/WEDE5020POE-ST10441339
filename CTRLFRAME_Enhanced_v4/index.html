@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTRL//FRAME</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<!-- jQuery + Ripples Plugin -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples-min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    setTimeout(() => {
+      $('.water-effect').ripples({
+        resolution: 256,
+        dropRadius: 20,
+        perturbance: 0.04,
+        interactive: true
+      });
+    }, 5000); // Start 5 seconds after logo
+  });
+</script>
+
+<body>
+  <!-- Page Intro Logo Animation Overlay -->
+  <div id="page-intro">
+  <img id="intro-logo" src="images/CTRLFRAME (1).png" alt="CTRLFRAME Logo" class="intro-logo" />
+  <div class="water-effect"></div>
+</div>
+
+
+
+  <header id="navbar">
+    <nav class="nav-container">
+      <h1 class="logo">CTRL<span>//</span>FRAME</h1>
+      <img src="images/CTRLFRAME (1).png" alt="CTRLFRAME Logo" width="170">
+      <ul class="nav-links">
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="branches.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+
+        
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🌊 Hero Section with Animated Waves -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2 class="glitch" data-text="CTRL//FRAME">CTRL//FRAME</h2>
+      <p class="tagline">Where youth creativity breaks the frame.</p>
+      <a href="about.html" class="cta-btn">Explore Our World</a>
+    </div>
+
+    <!-- SVG Waves -->
+    <div class="waves-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 
+          58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use href="#gentle-wave" x="48" y="0" fill="rgba(135,206,235,0.3)" />
+          <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.2)" />
+          <use href="#gentle-wave" x="48" y="5" fill="rgba(135,206,235,0.2)" />
+          <use href="#gentle-wave" x="48" y="7" fill="#000000" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section id="branches" class="section">
+    <div class="branch">
+      <h3>Frame by Frame</h3>
+      <p>A space for young filmmakers, animators, and storytellers to bring motion to ideas.</p>
+    </div>
+    <div class="branch">
+      <h3>Canvas CTRL</h3>
+      <p>Where visual artists, designers, and illustrators remix the canvas with bold expression.</p>
+    </div>
+  </section>
+  
+  <footer id="footer">
+    <p>© 2025 CTRL//FRAME. All rights reserved.</p>
+  </footer>
+
+  <!-- Audio Visualizer + Background -->
+  <canvas id="gen-canvas"></canvas>
+
+  <div id="audio-visualizer-ui">
+    <label>Audio:</label>
+    <input id="audio-file-input" type="file" accept="audio/*" />
+    <button id="audio-mic-btn">Mic</button>
+    <button id="audio-play-btn">Play</button>
+  </div>
+
+  <canvas id="audio-canvas"></canvas>
+
+  <button class="theme-toggle">🌓</button>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
